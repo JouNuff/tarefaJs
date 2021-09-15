@@ -1,23 +1,23 @@
 const {solucaoPrimeiroGrau, solucaoSegundoGrau} = require("./equacao")
 
 test('solucapPrimeiroGrau é null', () => {
-    expect(solucaoPrimeiroGrau(0, 5)).toBeNull();
+    expect(solucaoPrimeiroGrau(0, 10)).toBeNull();
 })
 
 test('solucaoPrimeiroGrau é igual a -0.2', () => {
-  expect(solucaoPrimeiroGrau(10, 2).raiz).toBe(-0.2);
+  expect(solucaoPrimeiroGrau(20, 4).raiz).toBe(-0.2);
 })
 
 test('solucaoPrimeiroGrau é igual a -0.1875', () => {
-  expect(solucaoPrimeiroGrau(16, 3).raiz).toBe(-0.1875);
+  expect(solucaoPrimeiroGrau(32, 6).raiz).toBe(-0.1875);
 })
 
 test('solucaoPrimeiroGrau é igual a 1.5', () => {
-  expect(solucaoPrimeiroGrau(10, -15).raiz).toBe(1.5);
+  expect(solucaoPrimeiroGrau(20, -30).raiz).toBe(1.5);
 })
 
 test('solucaoPrimeiroGrau b é igual a 0', () => {
-  expect(solucaoPrimeiroGrau(13, 0).raiz).toBe(-0);
+  expect(solucaoPrimeiroGrau(3, 0).raiz).toBe(-0);
 })
 
 
@@ -25,7 +25,7 @@ test('solucaoPrimeiroGrau b é igual a 0', () => {
 
 //método solucaoSegundoGrau
 test('solucaoSegundoGrau possui a == 0', () => {
-  expect(solucaoSegundoGrau(0, 10, 5)).toBeNull;
+  expect(solucaoSegundoGrau(0, 3, 8)).toBeNull;
 })
 
 test('solucaoSegundoGrau possui delta negativo', () => {
@@ -41,5 +41,5 @@ test('solucaoSegundoGrau com c igual a zero', () => {
 })
 
 test('solucaoSegundoGrau com b igual a zero', () => {
-  expect(solucaoSegundoGrau(4, 0, -16)).toMatchObject({raiz1: 2, raiz2: -2});
+  expect(solucaoSegundoGrau(8, 0, -32)).toMatchObject({raiz1: 2, raiz2: -2});
 })
